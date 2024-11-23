@@ -1,0 +1,17 @@
+{
+  "name": "prasi-local",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot backend/server/dev.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "uuid": "^11.0.3"
+  }
+}
