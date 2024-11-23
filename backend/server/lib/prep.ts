@@ -5,9 +5,11 @@ export const preparePrasi = async (req: Request) => {
   if (req.url.includes("prep?setup=")) {
     const site_id = req.url.split("=")[1];
 
-    console.log(`Update prasi.json: site_id: ${site_id}`);
-    file.write("prasi.json", JSON.stringify({ site_id }));
-    g.config.site_id = site_id;
+    if (site_id) {
+      console.log(`Update prasi.json: site_id: ${site_id}`);
+      g.config.site_id = site_id;
+      file.write("prasi.json", JSON.stringify(g.config));
+    }
 
     return Response.redirect("/");
   }
