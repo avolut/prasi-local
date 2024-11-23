@@ -12,7 +12,7 @@ if (!file.exists("node_modules")) {
   );
 
   await $`bun i`;
-  await $`cd backend/db && bun prisma generate`;
+  await $`cd backend/db && bun i && bun prisma generate`;
 }
 
 console.clear();
